@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Care</title>
+    <link rel="stylesheet" href="CSS/all.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <a href="index.html">HOME</a>
+            <a href="body.html">Body Care</a>
+            <a href="hair.html">Hair Care</a>
+            <a href="facial.html" class="active">Facial Care</a>
+            <a href="makeup.html">Makeup</a>
+            <input type="text" id="search-box" placeholder="Search for products...">
+            <div class="cart-icon" onclick="toggleCart()">
+                <img src="imgs/cart.png" alt="" height="30px" width="30px">
+            </div>
+        
+            <div id="overlay" onclick="toggleCart()"></div>
+            <div id="cart-popup">
+                <h2>Your Cart</h2>
+                <ul id="cart-items">
+                    <!-- products added automatecally with js  -->
+                </ul>
+                <p>Total: $<span id="cart-total">0</span></p>
+                <button class="close-btn" onclick="toggleCart()">Close</button>
+            </div>
+        </div>
+    </nav>
+        <div class="subcontainer">
+            <div class="logo">
+                <a href="#">
+                    <img src="imgs/logo.jpg" alt="" >
+                </a>
+            </div>
+
+            <div id="confirmation-message" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.7); color: white; padding: 15px 30px; border-radius: 5px; display: none; font-size: 16px; z-index: 1000;"></div>
+
+
+    <div class="facialcare">
+        <div class="product-container">
+        <div class="product">
+            <img src="imgs/mask.jpg" alt="" width="200px" height="250">
+            <h4>Mask</h4> <p><span><b>price : </b></span>300 $</p>
+            <button onclick="addToCart(this, 'Mask', 300)">Add to Cort</button><br>
+        </div>
+        <div class="product">
+            <img src="imgs/mask2.jpg" alt="" width="200px" height="250">
+            <h4>Mask</h4> <p><span><b>price : </b></span>300 $</p>
+            <button onclick="addToCart(this, 'Mask 1', 300)">Add to Cort</button><br>
+        </div>
+        <div class="product">
+            <img src="imgs/mask3.jpg" alt="" width="200px" height="250">
+            <h4>Mask</h4> <p><span><b>price : </b></span>300 $</p>
+            <button onclick="addToCart(this, 'Mask 2', 300)">Add to Cort</button><br>
+        </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="imgs/soap.jpg" alt="" width="200px" height="250">
+                <h4>Soap</h4> <p><span><b>price : </b></span>210 $</p>
+                <button onclick="addToCart(this, 'Soap', 210)">Add to Cort</button><br>
+            </div>
+            <div class="product">
+                <img src="imgs/soap2.jpg" alt="" width="200px" height="250">
+                <h4>Soap</h4> <p><span><b>price : </b></span>210 $</p>
+                <button onclick="addToCart(this, 'Soap 1', 210)">Add to Cort</button><br>
+            </div>
+            <div class="product">
+                <img src="imgs/soap3.jpg" alt="" width="200px" height="250">
+                <h4>Soap</h4> <p><span><b>price : </b></span>210 $</p>
+                <button onclick="addToCart(this, 'Soap 2', 210)">Add to Cort</button><br>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="imgs/cream.jpg" alt="" width="200px" height="250">
+                <h4>cream</h4> <p><span><b>price : </b></span>380 $</p>
+                <button onclick="addToCart(this, 'Soap 1',380)">Add to Cort</button><br>
+            </div>
+            <div class="product">
+                <img src="imgs/cream2.jpg" alt="" width="200px" height="250">
+                <h4>cream</h4> <p><span><b>price : </b></span>380 $</p>
+                <button onclick="addToCart(this, 'cream',380)">Add to Cort</button><br>
+            </div>
+            <div class="product">
+                <img src="imgs/cream3.jpg" alt="" width="200px" height="250">
+                <h4>cream</h4> <p><span><b>price : </b></span>380 $</p>
+                <button onclick="addToCart(this, 'cream 1',380)">Add to Cort</button><br>
+            </div>
+            <div class="product">
+                <img src="imgs/cream4.jpg" alt="" width="200px" height="250">
+                <h4>Cream</h4> <p><span><b>price : </b></span>380 $</p>
+                <button onclick="addToCart(this, 'cream 2',380)">Add to Cort</button><br>
+            </div>
+            
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="imgs/lip balm.jpg" alt="" width="200px" height="250">
+                <h4>Lip Balm</h4> <p><span><b>price : </b></span>150 $</p>
+                <button onclick="addToCart(this, 'Lip Balm', 150)">Add to Cort</button><br>
+            </div>
+            <div class="product">
+                <img src="imgs/lip balm2.jpg" alt="" width="200px" height="250">
+                <h4>Lip Balm</h4> <p><span><b>price : </b></span>150 $</p>
+                <button onclick="addToCart(this, 'Lip Balm 1', 150)">Add to Cort</button><br>
+            </div>
+            <div class="product">
+                <img src="imgs/lip balm1.jpeg" alt="" width="200px" height="250">
+                <h4>Lip Balm</h4> <p><span><b>price : </b></span>150 $</p>
+                <button onclick="addToCart(this, 'Lip Balm 2', 150)">Add to Cort</button><br>
+            </div>
+            <div class="product">
+                <img src="imgs/lip balm2.jpeg" alt="" width="200px" height="250">
+                <h4>Lip Balm</h4> <p><span><b>price : </b></span>150 $</p>
+                <button onclick="addToCart(this, 'Lip Balm 3', 150)">Add to Cort</button><br>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="imgs/makeupremover1.jpg" alt="" width="200px" height="250">
+                <h4>Makeup Remover</h4> <p><span><b>price : </b></span>160 $</p>
+                <button onclick="addToCart(this, 'Makeup Remover',160 )">Add to Cort</button><br>
+            </div>
+            <div class="product">
+                <img src="imgs/makeupremover2.jpg" alt="" width="200px" height="250">
+                <h4>Makeup Remover</h4> <p><span><b>price : </b></span>160 $</p>
+                <button onclick="addToCart(this, 'Makeup Remover 1', 160)">Add to Cort</button><br>
+            </div>
+            <div class="product">
+                <img src="imgs/makeupremover6.jpg" alt="" width="200px" height="250">
+                <h4>Makeup Remover</h4> <p><span><b>price : </b></span>160 $</p>
+                <button onclick="addToCart(this, 'Makeup Remover 2', 160)">Add to Cort</button><br>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <!-- Our Services Section -->
+        <div class="our-services">
+            <h3>Our Services</h3>
+            <ul>
+                <li><a href="body.html">Body Care</a></li>
+                <li><a href="hair.html">Hair Care</a></li>
+                <li><a href="facial.html">Facial Care</a></li>
+                <li><a href="makeup.html">Makeup</a></li>
+                <li><a href="consultations.html">Consultations</a></li> <!-- استشارة مثلا -->
+            </ul>
+        </div>
+    
+        <!-- Discover Section -->
+        <div class="discover">
+            <h3>Discover</h3>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="new-arrivals.html">New Arrivals</a></li>
+            </ul>
+        </div>
+    
+        <!-- Customer Care Section -->
+        <div class="customer-care">
+            <h3>Customer Care</h3>
+            <ul>
+                <li><a href="shipping.html">Shipping & Delivery</a></li>
+                <li><a href="returns.html">Returns & Exchanges</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </div>
+        
+        <!-- Optional: Contact Section -->
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><a href="#"><img src="imgs/facebook.png" alt="Facebook" width="15" height="15"> Facebook</a></li>
+                <li><a href="#"><img src="imgs/twitter.png" alt="Twitter" width="15" height="15"> Twitter</a></li>
+                <li><a href="#"><img src="imgs/instagram.png" alt="Instagram" width="15" height="15"> Instagram</a></li>
+                <li><a href="#"><img src="imgs/linkedin.png" alt="LinkedIn" width="15" height="15"> LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Makeup </title>
+    <link rel="stylesheet" href="CSS/all.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <a href="index.html">HOME</a>
+            <a href="body.html">Body Care</a>
+            <a href="hair.html">Hair Care</a>
+            <a href="facial.html">Facial Care</a>
+            <a href="makeup.html" class="active">Makeup</a>
+            <input type="text" id="search-box" placeholder="Search for products...">
+
+        <div class="cart-icon" onclick="toggleCart()">
+            <img src="imgs/cart.png" alt="" height="30px" width="30px">
+        </div>
+
+        <div id="overlay" onclick="toggleCart()"></div>
+            <div id="cart-popup">
+                <h2>Your Cart</h2>
+                <ul id="cart-items">
+                    <!-- products added automatecally with js  -->
+                </ul>
+                <p>Total: $ <span id="cart-total"> 0 </span> </p>
+                <button class="close-btn" onclick="toggleCart()">Close</button>
+            </div>
+        </div>
+        
+    </nav>
+        <div class="subcontainer">
+            <div class="logo">
+                <a href="#">
+                    <img src="imgs/logo.jpg" alt="" >
+                </a>
+            </div>
+            
+            <div id="confirmation-message" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.7); color: white; padding: 15px 30px; border-radius: 5px; display: none; font-size: 16px; z-index: 1000;">
+            </div>
+        <div class="makeup">
+            <div class="category" id="face">
+                    <marquee behavior="slide" direction="" scrollamount="15"><i><h2>Face</h2></i></marquee>
+                <div class="product-container">
+                    <div class="product">
+                        <img src="imgs/concealer.jpeg" alt="" width="300px" height="400px">
+                        <h4>Concealer</h4> <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Concealer', 250)">Add to cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/concealer1.jpeg" alt="" width="350px" height="400px">
+                        <h4>Concealer</h4> <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Concealer1', 250)">Add to cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/concealer2.jpg" alt="" width="300px" height="400px">
+                        <h4>Concealer</h4> <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Concealer2', 250)">Add to cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/concealer.jpg" alt="" width="300px" height="400px">
+                        <h4>Concealer</h4> <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Concealer3', 250)">Add to cart</button><br>
+                    </div>
+                    
+                </div>
+                <div class="product-container">
+                    <div class="product">
+                        <img src="imgs/contour2.jpeg" alt="" width="200px" height="250px">
+                        <h4>Contour</h4> <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Contour', 250)">Add to cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/contour.jpg" alt="" width="200px" height="250px">
+                        <h4>Contour</h4> <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Contour1', 250)">Add to cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/countour1.jpeg" alt="" width="200px" height="250px">
+                        <h4>Contour</h4> <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Contour2', 250)">Add to cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/contour.jpeg" alt="" width="200px" height="250px">
+                        <h4>Contour</h4> <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Contour3', 250)">Add to cart</button><br>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <div class="product">
+                        <img src="imgs/foundation.jpg" alt="" width="200px" height="250px">
+                        <h4>Foundation</h4> <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Foundation', 250)">Add to cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/foundation.jpeg" alt="" width="200px" height="250px">
+                        <h4>Foundation</h4> <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Foundation1', 250)">Add to cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/foundation2.jpg" alt="" width="200px" height="275px">
+                        <h4>Foundation</h4> <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Foundation2', 250)">Add to cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/foundation1.jpeg" alt="" width="200px" height="250px">
+                        <h4>Foundation</h4> <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Foundation3', 250)">Add to cart</button><br>
+                    </div>
+                    
+                </div>
+                <div class="product-container">
+                    <div class="product">
+                        <img src="imgs/highlighter.jpg" alt="" width="250px" height="250px">
+                        <h4>Highlighter</h4> <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Highlighter', 250)">Add to cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/highlighting powder.jpeg" alt="" width="200px" height="250px">
+                        <h4>Highlighter</h4> <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Highlighter1', 250)">Add to cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/Fenty Highlighter.jpeg" alt="" width="250px" height="250px">
+                        <h4>Highlighter</h4> <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Highlighter2', 250)">Add to cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/Sheglam liquid highlighter (1).jpeg" alt="" width="200px" height="250px">
+                        <h4>Highlighter</h4> <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Highlighter3', 250)">Add to cart</button><br>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <div class="product">
+                        <img src="imgs/blush.jpg" alt="" width="200px" height="250px">
+                        <h4>Blush</h4> <p><span><b>Price : </b></span> 320 $</p>
+                        <button onclick="addToCart(this, 'Blush', 320)">Add to cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/blush2.jpg" alt="" width="200px" height="250px">
+                        <h4>Blush</h4> <p><span><b>Price : </b></span> 320 $</p>
+                        <button onclick="addToCart(this, 'Blus1', 320)">Add to cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/blash.jpeg" alt="" width="150px" height="250px">
+                        <h4>Blush</h4> <p><span><b>Price : </b></span> 320 $</p>
+                        <button onclick="addToCart(this, 'Blush2', 320)">Add to cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/blasher.jpeg" alt="" width="200px" height="250px">
+                        <h4>Blush</h4> <p><span><b>Price : </b></span> 320 $</p>
+                        <button onclick="addToCart(this, 'Blush3', 320)">Add to cart</button><br>
+                    </div>
+                    
+                    
+                </div>
+                <div class="product-container">
+                    <div class="product">
+                        <img src="imgs/powder.jpg" alt="" width="200px" height="200px">
+                        <h4>Powder</h4> <p><span><b>Price : </b></span> 320 $</p>
+                        <button onclick="addToCart(this, 'Powder', 320)">Add to Cort</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/powder2.jpg" alt="" width="200px" height="200px">
+                        <h4>Powder</h4> <p><span><b>Price : </b></span> 320 $</p>
+                        <button onclick="addToCart(this, 'Powder1', 320)">Add to Cort</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/powder2.jpeg" alt="" width="150px" height="200px">
+                        <h4>Powder</h4> <p><span><b>Price : </b></span> 320 $</p>
+                        <button onclick="addToCart(this, 'Powder2', 320)">Add to Cort</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/Loose Powder.jpeg" alt="" width="200px" height="200px">
+                        <h4>Powder</h4> <p><span><b>Price : </b></span> 320 $</p>
+                        <button onclick="addToCart(this, 'Powder3', 320)">Add to Cort</button><br>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="category" id="eyes">
+                <i><h2>Eyes</h2></i>
+                <div class="product-container">
+                    <div class="product">
+                        <img src="imgs/eyebrow.jpg" alt="" width="200px" height="250px">
+                        <h4>Eyebrow</h4>
+                        <p><span><b>Price : </b></span> 320 $</p>
+                        <button onclick="addToCart(this, 'Eyebrow', 320)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/Eyebrow Makeup.jpeg" alt="" width="150px" height="250px">
+                        <h4>Eyebrow</h4>
+                        <p><span><b>Price : </b></span> 320 $</p>
+                        <button onclick="addToCart(this, 'Eyebrow1', 320)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/eyebrow1.jpg" alt="" width="200px" height="250px">
+                        <h4>Eyebrow</h4>
+                        <p><span><b>Price : </b></span> 320 $</p>
+                        <button onclick="addToCart(this, 'Eyebrow2', 320)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/Eyebrow Pomade.jpeg" alt="" width="150px" height="250px">
+                        <h4>Eyebrow</h4>
+                        <p><span><b>Price : </b></span> 320 $</p>
+                        <button onclick="addToCart(this, 'Eyebrow3', 320)">Add to Cart</button><br>
+                    </div>
+                </div>
+                
+                <div class="product-container">
+                    <div class="product">
+                        <img src="imgs/eyeshadow.jpg" alt="" width="175px" height="250px">
+                        <h4>Eyeshadow</h4>
+                        <p><span><b>Price : </b></span> 550 $</p>
+                        <button onclick="addToCart(this, 'Eyeshadow', 550)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/eyeshadow1.jpg" alt="" width="200px" height="250px">
+                        <h4>Eyeshadow</h4>
+                        <p><span><b>Price : </b></span> 550 $</p>
+                        <button onclick="addToCart(this, 'Eyeshadow1', 550)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/eyeshadow2.jpg" alt="" width="200px" height="250px">
+                        <h4>Eyeshadow</h4>
+                        <p><span><b>Price : </b></span> 550 $</p>
+                        <button onclick="addToCart(this, 'Eyeshadow2', 550)">Add to Cart</button><br>
+                    </div>
+                </div>
+                
+                <div class="product-container">
+                    <div class="product">
+                        <img src="imgs/mascara.jpg" alt="" width="200px" height="300px">
+                        <h4>Mascara</h4>
+                        <p><span><b>Price : </b></span> 550 $</p>
+                        <button onclick="addToCart(this, 'Mascara', 550)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/mascara2.jpg" alt="" width="200px" height="300px">
+                        <h4>Mascara</h4>
+                        <p><span><b>Price : </b></span> 550 $</p>
+                        <button onclick="addToCart(this, 'Mascara1', 550)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/mascara4.jpg" alt="" width="200px" height="300px">
+                        <h4>Mascara</h4>
+                        <p><span><b>Price : </b></span> 550 $</p>
+                        <button onclick="addToCart(this, 'Mascara2', 550)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/mascara5.jpg" alt="" width="200px" height="300px">
+                        <h4>Mascara</h4>
+                        <p><span><b>Price : </b></span> 550 $</p>
+                        <button onclick="addToCart(this, 'Mascara3', 550)">Add to Cart</button><br>
+                    </div>
+                </div>
+                
+                <div class="product-container">
+                    <div class="product">
+                        <img src="imgs/eyeliner1.jpg" alt="" width="200px" height="300px">
+                        <h4>Eyeliner</h4>
+                        <p><span><b>Price : </b></span> 360 $</p>
+                        <button onclick="addToCart(this, 'Eyeliner', 360)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/eyeliner2.jpg" alt="" width="200px" height="300px">
+                        <h4>Eyeliner</h4>
+                        <p><span><b>Price : </b></span> 360 $</p>
+                        <button onclick="addToCart(this, 'Eyeliner1', 360)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/eyeliner.jpg" alt="" width="200px" height="300px">
+                        <h4>Eyeliner</h4>
+                        <p><span><b>Price : </b></span> 360 $</p>
+                        <button onclick="addToCart(this, 'Eyeliner2', 360)">Add to Cart</button><br>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="category" id="lips">
+                <i><h2>Lips</h2></i>
+                <div class="product-container">
+                    <div class="product">
+                        <img src="imgs/lipstick3.jpg" alt="" width="200px" height="250px">
+                        <h4>Lip Stick</h4>
+                        <p><span><b>Price : </b></span> 360 $</p>
+                        <button onclick="addToCart(this, 'Lip Stick', 360)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/lipstick5.jpg" alt="" width="200px" height="250px">
+                        <h4>Lip Stick</h4>
+                        <p><span><b>Price : </b></span> 360 $</p>
+                        <button onclick="addToCart(this, 'Lip Stick1', 360)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/lipstick8.jpg" alt="" width="200px" height="250px">
+                        <h4>Lip Stick</h4>
+                        <p><span><b>Price : </b></span> 360 $</p>
+                        <button onclick="addToCart(this, 'Lip Stick2', 360)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/lipstick9.jpg" alt="" width="200px" height="250px">
+                        <h4>Lip Stick</h4>
+                        <p><span><b>Price : </b></span> 360 $</p>
+                        <button onclick="addToCart(this, 'Lip Stick3', 360)">Add to Cart</button><br>
+                    </div>
+                </div>
+                
+                <div class="product-container">
+                    <div class="product">
+                        <img src="imgs/lipgloss7.jpg" alt="" width="200px" height="250px">
+                        <h4>Lip Gloss</h4>
+                        <p><span><b>Price : </b></span> 150 $</p>
+                        <button onclick="addToCart(this, 'Lip Gloss', 150)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/lipgloss4.jpg" alt="" width="150px" height="250px">
+                        <h4>Lip Gloss</h4>
+                        <p><span><b>Price : </b></span> 150 $</p>
+                        <button onclick="addToCart(this, 'Lip Gloss1', 150)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/lipgloss6.jpg" alt="" width="200px" height="250px">
+                        <h4>Lip Gloss</h4>
+                        <p><span><b>Price : </b></span> 150 $</p>
+                        <button onclick="addToCart(this, 'Lip Gloss2', 150)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/lipgloss.jpg" alt="" width="200px" height="250px">
+                        <h4>Lip Gloss</h4>
+                        <p><span><b>Price : </b></span> 150 $</p>
+                        <button onclick="addToCart(this, 'Lip Gloss3', 150)">Add to Cart</button><br>
+                    </div>
+                </div>
+                
+                <div class="product-container">
+                    <div class="product">
+                        <img src="imgs/lipliner.jpg" alt="" width="200px" height="300px">
+                        <h4>Lip Liner</h4>
+                        <p><span><b>Price : </b></span> 150 $</p>
+                        <button onclick="addToCart(this, 'Lip Liner', 150)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/lipliner3.jpg" alt="" width="200px" height="300px">
+                        <h4>Lip Liner</h4>
+                        <p><span><b>Price : </b></span> 150 $</p>
+                        <button  onclick="addToCart(this, 'Lip Liner1', 150)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/lipliner2.jpg" alt="" width="200px" height="300px">
+                        <h4>Lip Liner</h4>
+                        <p><span><b>Price : </b></span> 150 $</p>
+                        <button  onclick="addToCart(this, 'Lip Liner2', 150)">Add to Cart</button><br>
+                    </div>
+                </div>
+                
+                <div class="product-container">
+                    <div class="product">
+                        <img src="imgs/liptint1.jpg" alt="" width="250px" height="300px">
+                        <h4>Lip Tint</h4>
+                        <p><span><b>Price : </b></span> 300 $</p>
+                        <button onclick="addToCart(this, 'Lip Tint', 300)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/liptint3.jpg" alt="" width="200px" height="300px">
+                        <h4>Lip Tint</h4>
+                        <p><span><b>Price : </b></span> 300 $</p>
+                        <button onclick="addToCart(this, 'Lip Tint1', 300)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/liptint5.jpg" alt="" width="200px" height="300px">
+                        <h4>Lip Tint</h4>
+                        <p><span><b>Price : </b></span> 300 $</p>
+                        <button onclick="addToCart(this, 'Lip Tint2', 300)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/liptint6.jpg" alt="" width="200px" height="300px">
+                        <h4>Lip Tint</h4>
+                        <p><span><b>Price : </b></span> 300 $</p>
+                        <button onclick="addToCart(this, 'Lip Tint3', 300)">Add to Cart</button><br>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="category" id="tools">
+                <i><h2>Makeup Tools</h2></i>
+                
+                
+                <div class="product-container">
+                    <div class="product">
+                        <img src="imgs/puff1.jpg" alt="" width="200px" height="250px">
+                        <h4>Sponges & Puffs</h4>
+                        <p><span><b>Price : </b></span> 300 $</p>
+                        <button onclick="addToCart(this, 'Sponges & Puffs', 300)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/brushes2.jpg" alt="" width="200px" height="250px">
+                        <h4>Sponges & Puffs</h4>
+                        <p><span><b>Price : </b></span> 300 $</p>
+                        <button onclick="addToCart(this, 'Sponges & Puffs1', 300)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/puff4.jpg" alt="" width="200px" height="250px">
+                        <h4>Sponges & Puffs</h4>
+                        <p><span><b>Price : </b></span> 300 $</p>
+                        <button onclick="addToCart(this, 'Sponges & Puffs2', 300)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/puff.jpg" alt="" width="200px" height="250px">
+                        <h4>Sponges & Puffs</h4>
+                        <p><span><b>Price : </b></span> 300 $</p>
+                        <button onclick="addToCart(this, 'Sponges & Puffs3', 300)">Add to Cart</button><br>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <div class="product">
+                        <img src="imgs/brushes1.jpg" alt="" width="200px" height="225px">
+                        <h4>Brushes</h4>
+                        <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Brushes', 250)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/brushes.jpg" alt="" width="200px" height="225px">
+                        <h4>Brushes</h4>
+                        <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Brushes1', 250)">Add to Cart</button><br>
+                    </div>
+                    <div class="product">
+                        <img src="imgs/brushes3.jpg" alt="" width="200px" height="225px">
+                        <h4>Brushes</h4>
+                        <p><span><b>Price : </b></span> 250 $</p>
+                        <button onclick="addToCart(this, 'Brushes2', 250)">Add to Cart</button><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+            
+        
+        <footer>
+            <div class="our-services">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="body.html">Body Care</a></li>
+                    <li><a href="hair.html">Hair Care</a></li>
+                    <li><a href="facial.html">Facial Care</a></li>
+                    <li><a href="makeup.html">Makeup</a></li>
+                </ul>
+            </div>
+        
+            <div class="discover">
+                <h3>Discover</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="new-arrivals.html">New Arrivals</a></li>
+                </ul>
+            </div>
+
+            <div class="customer-care">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="shipping.html">Shipping & Delivery</a></li>
+                    <li><a href="returns.html">Returns & Exchanges</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="#"><img src="imgs/facebook.png" alt="Facebook" width="15" height="15"> Facebook</a></li>
+                    <li><a href="#"><img src="imgs/twitter.png" alt="Twitter" width="15" height="15"> Twitter</a></li>
+                    <li><a href="#"><img src="imgs/instagram.png" alt="Instagram" width="15" height="15"> Instagram</a></li>
+                    <li><a href="#"><img src="imgs/linkedin.png" alt="LinkedIn" width="15" height="15"> LinkedIn</a></li>
+                </ul>
+            </div>
+        </footer>
+</body>
+</html>

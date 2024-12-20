@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Care </title>
+    <link rel="stylesheet" href="CSS/all.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <a href="index.html">HOME</a>
+            <a href="body.html">Body Care</a>
+            <a href="hair.html" class="active">Hair Care</a>
+            <a href="facial.html">Facial Care</a>
+            <a href="makeup.html">Makeup</a>
+            <input type="text" id="search-box" placeholder="Search for products...">
+
+            <div class="cart-icon" onclick="toggleCart()">
+                <img src="imgs/cart.png" alt="" height="30px" width="30px">
+            </div>
+        
+            <div id="overlay" onclick="toggleCart()"></div>
+            <div id="cart-popup">
+                <h2>Your Cart</h2>
+                <ul id="cart-items">
+                    <!-- products added automatecally with js  -->
+                </ul>
+                <p>Total: $<span id="cart-total">0</span></p>
+                <button class="close-btn" onclick="toggleCart()">Close</button>
+            </div>
+        </div>
+    </nav>
+        <div class="subcontainer">
+            <div class="logo">
+                <a href="#">
+                    <img src="imgs/logo.jpg" alt="" >
+                </a>
+            </div>
+            
+            <!-- عنصر لعرض رسالة التأكيد -->
+            <div id="confirmation-message" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.7); color: white; padding: 15px 30px; border-radius: 5px; display: none; font-size: 16px; z-index: 1000;">
+            </div>
+        <div class="haircare">
+            <div class="product-container">
+                <div class="product">
+                    <img src="imgs/shampoo (2).jpg" alt="" width="200px" height="250px">
+                <h4>Shampoo & Conditioner</h4> <p><span><b>Price : </b></span> 850 $</p>
+                <button onclick="addToCart(this, 'Shampoo & Conditioner', 850)">Add to cart</button><br>
+                </div>
+                <div class="product">
+                    <img src="imgs/shampoo (4).jpg" alt="" width="200px" height="250px">
+                <h4>Shampoo & Conditioner</h4> <p><span><b>Price : </b></span> 850 $</p>
+                <button onclick="addToCart(this, 'Shampoo & Conditioner 1',  850)">Add to cart</button><br>
+                </div>
+                <div class="product">
+                    <img src="imgs/shampoo (5).jpg" alt="" width="200px" height="250px">
+                    <h4>Shampoo & Conditioner</h4> <p><span><b>Price : </b></span> 850 $</p>
+                    <button onclick="addToCart(this, 'Shampoo & Conditioner 2',  850)">Add to cart</button><br>
+                </div>
+                <div class="product">
+                <img src="imgs/shampoo (6).jpg" alt="" width="200px" height="250px">
+                <h4>Shampoo & Conditioner</h4> <p><span><b>Price : </b></span> 850 $</p>
+                <button onclick="addToCart(this, 'Shampoo & Conditioner 3',  850)">Add to cart</button><br>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="product">
+                    <img src="imgs/serum.jpg" alt="" width="275px" height="300px">
+                    <h4>Serum</h4> <p><span><b>Price : </b></span> 750 $</p>
+                    <button onclick="addToCart(this, 'Serum', 750)">Add to cart</button><br>
+                </div>
+                <div class="product">
+                <img src="imgs/serum.jpeg" alt="" width="200px" height="300px">
+                <h4>Serum</h4> <p><span><b>Price : </b></span> 750 $</p>
+                <button onclick="addToCart(this, 'Serum 1', 750)">Add to cart</button><br>
+                </div>
+                <div class="product">
+                    <img src="imgs/serum1.jpeg" alt="" width="200px" height="300px">
+                    <h4>Serum</h4> <p><span><b>Price : </b></span> 750 $</p>
+                    <button onclick="addToCart(this, 'Serum 2',750)">Add to cart</button><br>
+                </div>
+                
+            </div>
+            <div class="product-container">
+                <div class="product">
+                    <img src="imgs/leave-in.jpg" alt="" width="200px" height="250px">
+                    <h4>Leave-in</h4> <p><span><b>Price : </b></span> 640 $</p>
+                    <button onclick="addToCart(this, 'Leave-in',640 )">Add to cart</button><br>
+                </div>
+                <div class="product">
+                    <img src="imgs/leav in.jpeg" alt="" width="200px" height="300px">
+                    <h4>Leave-in</h4> <p><span><b>Price : </b></span> 640 $</p>
+                    <button onclick="addToCart(this, 'Leave-in 1', 640)">Add to cart</button><br>
+                </div>
+                <div class="product">
+                    <img src="imgs/Leave-In Conditioner.jpeg" alt="" width="200px" height="300px">
+                    <h4>Leave-in</h4> <p><span><b>Price : </b></span> 640 $</p>
+                    <button onclick="addToCart(this, 'Leave-in 2', 640)">Add to cart</button><br>
+                </div>
+                
+            </div>
+            <div class="product-container">
+                <div class="product">
+                    <img src="imgs/hair oil.jpg" alt="" width="200px" height="250px">
+                    <h4>Hair Oil</h4> <p><span><b>Price : </b></span> 450 $</p>
+                    <button  onclick="addToCart(this, 'Hair Oil', 450)">Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="imgs/hair oil.jpeg" alt="" width="200px" height="250px">
+                    <h4>Hair Oil</h4> <p><span><b>Price : </b></span> 450 $</p>
+                    <button onclick="addToCart(this, 'Hair Oil 1',450)">Add to cart</button>   
+                </div>
+                <div class="product">
+                    <img src="imgs/hair oil2.jpeg" alt="" width="200px" height="250px">
+                    <h4>Hair Oil</h4> <p><span><b>Price : </b></span> 450 $</p>
+                    <button onclick="addToCart(this, 'Hair Oil 2',450 )"Add to cart></button>
+                </div>
+                
+            </div>
+            <div class="product-container">
+                <div class="product">
+                    <img src="imgs/hair cream.jpg" alt="" width="250px" height="250px">
+                    <h4>Hair Cream</h4> <p><span><b>Price : </b></span> 650 $</p>
+                    <button onclick="addToCart(this, 'Hair Cream', 650)">Add to cart</button><br>
+                </div>
+                <div class="product">
+                    <img src="imgs/hair cream 1.jpeg" alt="" width="200px" height="250px">
+                    <h4>Hair Cream</h4> <p><span><b>Price : </b></span> 650 $</p>
+                    <button onclick="addToCart(this, 'Hair Cream 1', 650)">Add to cart</button><br>
+                </div>
+                <div class="product">
+                    <img src="imgs/hair cream.jpeg" alt="" width="250px" height="250px">
+                    <h4>Hair Cream</h4> <p><span><b>Price : </b></span> 650 $</p>
+                    <button onclick="addToCart(this, 'Hair Cream 2', 650)">Add to cart</button><br>
+                </div>
+                <div class="product">
+                    <img src="imgs/hair cream.jpeg" alt="" width="250px" height="250px">
+                    <h4>Hair Cream</h4> <p><span><b>Price : </b></span> 650 $</p>
+                    <button onclick="addToCart(this, 'Hair Cream 3',650)">Add to cart</button><br>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+        <footer>
+            <!-- Our Services Section -->
+            <div class="our-services">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="body.html">Body Care</a></li>
+                    <li><a href="hair.html">Hair Care</a></li>
+                    <li><a href="facial.html">Facial Care</a></li>
+                    <li><a href="makeup.html">Makeup</a></li>
+                    <li><a href="consultations.html">Consultations</a></li> <!-- استشارة مثلا -->
+                </ul>
+            </div>
+        
+            <!-- Discover Section -->
+            <div class="discover">
+                <h3>Discover</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="new-arrivals.html">New Arrivals</a></li>
+                </ul>
+            </div>
+        
+            <!-- Customer Care Section -->
+            <div class="customer-care">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="shipping.html">Shipping & Delivery</a></li>
+                    <li><a href="returns.html">Returns & Exchanges</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Optional: Contact Section -->
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="#"><img src="imgs/facebook.png" alt="Facebook" width="15" height="15"> Facebook</a></li>
+                    <li><a href="#"><img src="imgs/twitter.png" alt="Twitter" width="15" height="15"> Twitter</a></li>
+                    <li><a href="#"><img src="imgs/instagram.png" alt="Instagram" width="15" height="15"> Instagram</a></li>
+                    <li><a href="#"><img src="imgs/linkedin.png" alt="LinkedIn" width="15" height="15"> LinkedIn</a></li>
+                </ul>
+            </div>
+        
+    </footer>
+</body>
+</html>
